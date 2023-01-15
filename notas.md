@@ -16,6 +16,10 @@ https://strapi.io/
 Comando
 npx create-strapi-app@latest my-project
 
+
+adavidpereyra@gmail.com
+Strapi1.
+
 Tenia node 19 y maximo compatible es 18
 Determining your Node version
 node -v  // or node --version
@@ -50,3 +54,16 @@ https://www.npmjs.com/package/@strapi/provider-upload-cloudinary
 npm install @strapi/provider-upload-cloudinary --save
 
 en cloudinary, media library, hay imagenes por default, habiendo configurado pugins.js y middlwares.js con los permisos necesarios y desde el content-type builder de strapi, se crea un campo del tipo media (simple media en este caso)
+
+
+Strapi no tiene una estructura de carpetas ordenadas como wordpress.
+Activar el acceso via API para permitir consumir contenido
+
+Panel -> Setting (USERS & PERMISSIONS PLUGIN) -> Roles -> Public
+
+Se listaran los permisos (Permissions) para las secciones (en este caso Guitarra que creamos)
+Ejemplo de url http://localhost:1337/api/guitarras despues de habilitar find
+Como en el resultado no se visualizan las imagenes, hay que agregar ?populate=* para visualizar  todos los campos
+por ejemplo http://localhost:1337/api/guitarras/4?populate=*
+pero se pueden limitar y mostrar los campos seleccionados, por ejemplo
+http://localhost:1337/api/guitarras/4?populate=Imagen
