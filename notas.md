@@ -67,3 +67,9 @@ Como en el resultado no se visualizan las imagenes, hay que agregar ?populate=* 
 por ejemplo http://localhost:1337/api/guitarras/4?populate=*
 pero se pueden limitar y mostrar los campos seleccionados, por ejemplo
 http://localhost:1337/api/guitarras/4?populate=Imagen
+
+
+
+dentro de assets 
+db_guitarla.local 
+es la base de datos, cambiar la extension a sql y restaurarla en pgadmin
